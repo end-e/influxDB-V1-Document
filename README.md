@@ -33,3 +33,32 @@ sudo apt-get update && sudo apt-get install influxdbsudo
 systemctl unmask influxdb.servicesudo 
 systemctl start influxdb
 ```
+
+#### Red Hat & CentOS
+
+使用`yum`包管理器
+
+```
+cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
+[influxdb]
+name = InfluxDB Repository - RHEL \$releasever
+baseurl = https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable
+enabled = 1
+gpgcheck = 1
+gpgkey = https://repos.influxdata.com/influxdata-archive_compat.key
+EOF
+```
+
+将存储库添加到`yum`配置后
+
+```
+sudo yum install influxdb
+sudo service influxdb start
+```
+
+如果是 CentOS 7+, RHEL 7+
+
+```
+sudo yum install influxdb
+sudo systemctl start influxdb
+```
