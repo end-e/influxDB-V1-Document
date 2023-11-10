@@ -19,4 +19,17 @@ InfluxDB 使用主机的本地时间（UTC）为数据分配时间戳。 使用�
 
 **Ubuntu & Debian**
 
-安装并启动 InfluxDB 服务。sudo apt-get update && sudo apt-get install influxdbsudo service influxdb start如果系统是 Ubuntu 15.04+, Debian 8+sudo apt-get update && sudo apt-get install influxdbsudo systemctl unmask influxdb.servicesudo systemctl start influxdb
+安装并启动 InfluxDB 服务。
+
+```bash
+sudo apt-get update && sudo apt-get install influxdb
+sudo service influxdb start
+```
+
+如果是 Ubuntu 15.04+ 或 Debian 8+
+
+```bash
+sudo apt-get update && sudo apt-get install influxdbsudo 
+systemctl unmask influxdb.servicesudo 
+systemctl start influxdb
+```
