@@ -4,7 +4,7 @@
 
 #### 安装要求 <a href="#an-zhuang-yao-qiu" id="an-zhuang-yao-qiu"></a>
 
-需要`root`用户权限进行安装。
+需要 `root` 用户权限进行安装。
 
 **使用的端口**
 
@@ -36,7 +36,7 @@ systemctl start influxdb
 
 #### Red Hat & CentOS
 
-使用`yum`包管理器
+使用 `yum` 包管理器
 
 ```
 cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
@@ -49,7 +49,7 @@ gpgkey = https://repos.influxdata.com/influxdata-archive_compat.key
 EOF
 ```
 
-将存储库添加到`yum`配置后
+将存储库添加到 `yum` 配置后
 
 ```
 sudo yum install influxdb
